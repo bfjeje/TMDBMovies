@@ -16,7 +16,7 @@ import bruno.ellerbach.tmdbmovies.model.Genre;
 public class GenreRecyclerAdapter extends
         RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private Context context;
+    private final Context context;
     private ArrayList<Genre> genreList;
 
     public GenreRecyclerAdapter(Context context, ArrayList<Genre> genreList) {
@@ -53,7 +53,7 @@ public class GenreRecyclerAdapter extends
 
     private class RecyclerListHolder extends RecyclerView.ViewHolder{
 
-        private TextView name;
+        private final TextView name;
 
         private RecyclerListHolder(View view) {
             super(view);

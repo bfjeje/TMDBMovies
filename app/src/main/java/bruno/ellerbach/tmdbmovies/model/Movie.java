@@ -7,8 +7,6 @@ import java.util.ArrayList;
 
 public class Movie implements Parcelable {
 
-    private final String POSTER_BASE_URL = "https://image.tmdb.org/t/p/w185";
-
     private int id;
     private String title;
     private String date;
@@ -21,60 +19,33 @@ public class Movie implements Parcelable {
         this.id = id;
         this.title = title;
         this.date = date;
+        String POSTER_BASE_URL = "https://image.tmdb.org/t/p/w185";
         this.posterUrl = POSTER_BASE_URL + posterUrl;
         this.overview = overview;
         this.genre = genre;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDate() {
         return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String getPosterUrl() {
         return posterUrl;
     }
 
-    public void setPosterUrl(String posterUrl) {
-        this.posterUrl = posterUrl;
-    }
-
     public String getOverview() {
         return overview;
-    }
-
-    public void setOverview(String overview) {
-        this.overview = overview;
     }
 
     public ArrayList<Integer> getGenre() {
         return genre;
     }
 
-    public void setGenre(ArrayList<Integer> genre) {
-        this.genre = genre;
-    }
-
-    protected Movie(Parcel in) {
+    private Movie(Parcel in) {
         title = in.readString();
         date = in.readString();
         posterUrl = in.readString();

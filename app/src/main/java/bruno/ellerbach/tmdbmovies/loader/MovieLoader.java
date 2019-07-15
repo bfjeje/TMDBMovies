@@ -28,7 +28,7 @@ public class MovieLoader {
     }
 
     private static MovieLoader movieLoader = null;
-    private RequestQueue queue;
+    private final RequestQueue queue;
 
     private MovieLoader(Context context) {
         queue = Volley.newRequestQueue(context);

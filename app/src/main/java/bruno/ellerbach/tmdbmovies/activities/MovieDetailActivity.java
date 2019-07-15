@@ -22,14 +22,16 @@ import bruno.ellerbach.tmdbmovies.model.Movie;
 
 public class MovieDetailActivity extends AppCompatActivity {
 
-    Movie mMovie;
-    TextView title, date, overview;
-    ImageView poster;
-    RecyclerView rvGenres;
-    GenreRecyclerAdapter genreRecyclerAdapter;
-    ArrayList<Integer> genresListDetail;
-    ArrayList<Genre> genresListDownloaded;
-    ArrayList<Genre> finalGenreListDisplayed;
+    private Movie mMovie;
+    private TextView title;
+    private TextView date;
+    private TextView overview;
+    private ImageView poster;
+    private RecyclerView rvGenres;
+    private GenreRecyclerAdapter genreRecyclerAdapter;
+    private ArrayList<Integer> genresListDetail;
+    private ArrayList<Genre> genresListDownloaded;
+    private ArrayList<Genre> finalGenreListDisplayed;
     private GenreLoader genreLoader;
 
     @Override

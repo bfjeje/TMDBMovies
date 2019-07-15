@@ -17,8 +17,6 @@ public class MovieListActivity extends AppCompatActivity implements MovieRecycle
 
     private MovieLoader movieLoader;
 
-    private RecyclerView moviesRecyclerView;
-
     private MovieRecyclerAdapter movieRecyclerAdapter;
 
     private ArrayList<Movie> movieList;
@@ -37,7 +35,7 @@ public class MovieListActivity extends AppCompatActivity implements MovieRecycle
 
     private void setUpRecycler() {
 
-        moviesRecyclerView = findViewById(R.id.recycler_main_movie);
+        RecyclerView moviesRecyclerView = findViewById(R.id.recycler_main_movie);
 
         movieRecyclerAdapter = new MovieRecyclerAdapter(this, movieList, this);
 

@@ -18,11 +18,11 @@ import bruno.ellerbach.tmdbmovies.model.Movie;
 
 public class MovieRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private Context context;
+    private final Context context;
 
     private ArrayList<Movie> movieList;
 
-    private OnMovieListener mOnMovieListener;
+    private final OnMovieListener mOnMovieListener;
 
     public MovieRecyclerAdapter(Context context, ArrayList<Movie> movieList, OnMovieListener onMovieListener) {
         this.context = context;
@@ -65,10 +65,10 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     private class RecyclerListHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private ImageView poster;
-        private TextView title;
-        private TextView date;
-        OnMovieListener onMovieListener;
+        private final ImageView poster;
+        private final TextView title;
+        private final TextView date;
+        final OnMovieListener onMovieListener;
 
         private RecyclerListHolder(View view, OnMovieListener onMovieListener) {
             super(view);

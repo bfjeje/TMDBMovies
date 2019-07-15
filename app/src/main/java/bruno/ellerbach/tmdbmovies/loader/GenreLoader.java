@@ -29,7 +29,7 @@ public class GenreLoader {
 
     private static GenreLoader genreLoader = null;
 
-    private RequestQueue queue;
+    private final RequestQueue queue;
 
     private GenreLoader(Context context) {
         queue = Volley.newRequestQueue(context);
@@ -42,6 +42,7 @@ public class GenreLoader {
         return genreLoader;
     }
 
+    @SuppressWarnings("SpellCheckingInspection")
     public void getGenres(final GenresListener<ArrayList<Genre>> listener) {
 
         String url = "https://api.themoviedb.org/3/genre/movie/list";
