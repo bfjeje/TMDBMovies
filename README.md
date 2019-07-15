@@ -1,6 +1,6 @@
 # TMDB Movies
 
-This is an Android Test project. It gets the upcoming movies from TMDB's API, display them, and then you can click one of them, and see some details, like description, genres, date and title.
+This is an Android Test project. It gets the upcoming movies from TMDb's API, display them, and then you can click one of them, and see some details, like description, genres, date and title.
 
 ## Getting Started
 
