@@ -64,7 +64,6 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
 .gitignore
-build.gradle
 libs/
 proguard-rules.pro
 src/androidTest/
@@ -74,3 +73,4 @@ src/main/java/bruno/ellerbach/tmdbmovies/ItemDetailFragment.java
 src/main/java/bruno/ellerbach/tmdbmovies/dummy/
 src/main/res/
 src/test/
+/TMDBMovies.zip

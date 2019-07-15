@@ -20,12 +20,6 @@ import bruno.ellerbach.tmdbmovies.loader.GenreLoader;
 import bruno.ellerbach.tmdbmovies.model.Genre;
 import bruno.ellerbach.tmdbmovies.model.Movie;
 
-/**
- * An activity representing a single Item detail screen. This
- * activity is only used on narrow width devices. On tablet-size devices,
- * item details are presented side-by-side with a list of items
- * in a {@link MovieListActivity}.
- */
 public class MovieDetailActivity extends AppCompatActivity {
 
     Movie mMovie;
@@ -51,12 +45,9 @@ public class MovieDetailActivity extends AppCompatActivity {
         overview = findViewById(R.id.overview_detail);
         poster = findViewById(R.id.poster_detail);
 
-
         genreLoader = GenreLoader.getInstance(this);
         genresListDownloaded = new ArrayList<>();
         finalGenreListDisplayed = new ArrayList<>();
-
-
 
         this.title.setText(mMovie.getTitle());
         this.date.setText(mMovie.getDate());
@@ -74,7 +65,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     }
 
     private void setupGenres() {
-        // Connecting the recyclerview to the view in the layout
+
         rvGenres = findViewById(R.id.recyclerview_genres);
         genreRecyclerAdapter = new GenreRecyclerAdapter(this, finalGenreListDisplayed);
         rvGenres.setAdapter(genreRecyclerAdapter);
@@ -84,9 +75,6 @@ public class MovieDetailActivity extends AppCompatActivity {
         rvGenres.setLayoutManager(layout);
     }
 
-    /**
-     * Downloading popular movies, and notifying the adapter when the list is downloaded.
-     */
     private void downloadGenres() {
         genreLoader.getGenres(new GenreLoader.GenresListener<ArrayList<Genre>>() {
             @Override
@@ -94,7 +82,6 @@ public class MovieDetailActivity extends AppCompatActivity {
                 genresListDownloaded = result;
 
                 for (int i = 0; i < genresListDetail.size(); i++) {
-                    int mId = genresListDetail.get(i);
                     for (int j = 0; j < genresListDownloaded.size(); j++) {
                         if (genresListDetail.get(i).equals(genresListDownloaded.get(j).getId())) {
                             finalGenreListDisplayed.add(genresListDownloaded.get(j));
@@ -103,8 +90,6 @@ public class MovieDetailActivity extends AppCompatActivity {
                     }
                 }
 
-                // Setting the list to the adapter.
-                // This will cause the list to be presented in the layout!
                 genreRecyclerAdapter.setGenreList(finalGenreListDisplayed);
             }
 
