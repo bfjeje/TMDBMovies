@@ -1,17 +1,6 @@
-# Built application files
-*.apk
-*.ap_
-
-# Files for the ART/Dalvik VM
-*.dex
-
-# Java class files
-*.class
-
 # Generated files
 bin/
 gen/
-out/
 
 # Gradle files
 .gradle/
@@ -63,3 +52,14 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+.gitignore
+libs/
+proguard-rules.pro
+src/androidTest/
+src/main/AndroidManifest.xml
+src/main/java/bruno/ellerbach/tmdbmovies/ItemDetailActivity.java
+src/main/java/bruno/ellerbach/tmdbmovies/ItemDetailFragment.java
+src/main/java/bruno/ellerbach/tmdbmovies/dummy/
+src/main/res/
+src/test/
+/TMDBMovies.zip
